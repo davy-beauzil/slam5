@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.title-section{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #000;
+    background-color: #ddd;
+}
+
+.users{
+    background-color: #fff;
+    width: 20vw;
+    position: absolute;
+    height: 100vh;
+    border: 1px solid #000;
+}
+
+.users .btn{
+    width: 50%;
+    padding: 5px 10px;
+    background-color: white;
+    margin: 15px 25% 0 25%;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.messages{
+    background-color:  #fff;
+    width: 80vw;
+    float: right;
+    height: 100vh;
+    border: 1px solid #000;
+}
+.user{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #000;
+}
+
+.nom{
+    margin-right: 2px;
+}
+.prenom{
+    margin-left: 2px;
+}

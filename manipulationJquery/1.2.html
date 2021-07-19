@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation jQuery</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <header>
+    </header>
+    <div class="container">
+        <div class="box">
+            cliquez ici
+        </div>
+    </div>
+    
+
+    <footer>
+    </footer>
+    
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+
+        var up = $('<p></p>');
+        var down = $('<p></p>');
+
+        $('.box').hover(function(){
+            console.log("attention, vous entrez dans le zone rouge")
+        }).mousedown(function(){
+            $('header').append(up.text('up').css('color', 'green').addClass('up').click(function(){
+                $(this).remove()
+            }));
+        }).mouseup(function(){
+            $('footer').append(down.text('down').css('color', 'red').addClass('down').click(function(){
+                $(this).remove()
+            }));
+        })
+
+
+
+        
+
+        
+        
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: cadetblue;
+            margin-bottom: 50px;
+            height: 100px;
+        }
+
+        .container{
+            display: flex;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box{
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer{
+            background-color: burlywood;
+            margin-top: 50px;
+            height: 100px;
+        }
+    </style>
+    
+</body>
+</html>

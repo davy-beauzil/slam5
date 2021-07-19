@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<script>
+    function generation(){
+        var liste = ['email', 'date', 'nom', 'prénom', 'commentaire'];
+
+        var body = document.querySelector('body');
+        var form = document.createElement('form');
+        form.action = 'affichage()';
+        
+        for(var i = 0 ; i < liste.length ; i++){
+            var input = document.createElement('input');
+            input.name = liste[i];
+            input.placeholder = liste[i];
+            input.className = liste[i];
+            input.style.display = "block";
+            input.style.margin = "10px 0";
+            form.append(input)
+        }
+        var input = document.createElement('input');
+        input.type = 'button';
+        input.value = 'valider';
+        input.addEventListener('click', function(){
+            var input = document.querySelectorAll('input');
+            var p = document.createElement('p');
+            p.textContent = "Je m'appelle " + input[3].value + " " + input[2].value + ", mon adresse mail est " + input[0].value + " et le " + input[1].value + ", j'ai écris ce commentaire : " + input[4].value;
+            body.append(p);
+        })
+        form.append(input);
+        body.append(form);
+
+        var dateInput = document.querySelector('.date');
+        var date = ;
+        var dateLocale = date.toLocaleString('fr-FR', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric'
+        })
+        dateInput.value = date;
+    }
+
+    function affichage(){
+        var body = document.querySelector('body');
+        var input = document.querySelectorAll('input');
+        var p = document.createElement('p');
+        p.textContent = "Je m'appelle" + input[2].value + " " + input[3].value + ", mon adresse mail est " + input[0].value + " et le " + input[1].value + ", j'ai écris ce commentaire : <br>" + input[4].value;
+        body.append(p);
+    }
+</script>
+<body onload="generation()">
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation jQuery</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <div class="exercice">
+        <h1>1) Jquery</h1>
+        <p class="paragraphe">ceci est un paragraphe</p>
+    </div>
+    
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+        $('.paragraphe').hover(function(){
+            $(this).text('ceci n\'est pas un paragraphe');
+        });
+    </script>
+
+    <style>
+        .exercice{
+            margin: 20px 0;
+            background-color: bisque;
+        }
+    </style>
+    
+</body>
+</html>
